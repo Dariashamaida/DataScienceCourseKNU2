@@ -195,5 +195,5 @@ numSamples
 ## 10.	Побудуйте графік за допомогою функції plot(myTime[0:numSamples], strain[0:numSamples], type = "l", xlab = "GPS Time (s)", ylab = "H1 Strain")
 ```{R}
 plot(myTime[0:numSamples], strain[0:numSamples], type = "l", xlab = "GPS Time (s)", ylab = "H1 Strain")
-![Rplot01](https://user-images.githubusercontent.com/47228237/70560769-dbcbdd00-1b91-11ea-8226-7ef59309aaa1.png)
+![image preview](https://user-images.githubusercontent.com/47228237/70560769-dbcbdd00-1b91-11ea-8226-7ef59309aaa1.png)
 ```
