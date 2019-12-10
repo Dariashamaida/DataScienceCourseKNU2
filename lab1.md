@@ -1,6 +1,6 @@
-# Лабораторна робота № 1. Завантаження та зчитування даних.
+# Г‹Г ГЎГ®Г°Г ГІГ®Г°Г­Г  Г°Г®ГЎГ®ГІГ  В№ 1. Г‡Г ГўГ Г­ГІГ Г¦ГҐГ­Г­Гї ГІГ  Г§Г·ГЁГІГіГўГ Г­Г­Гї Г¤Г Г­ГЁГµ.
 
-## 1. За допомогою download.file() завантажте любий excel файл з порталу http://data.gov.ua та зчитайте його (xls, xlsx – бінарні формати, тому встановить mode = “wb”. Виведіть перші 6 строк отриманого фрейму даних.
+## 1. Г‡Г  Г¤Г®ГЇГ®Г¬Г®ГЈГ®Гѕ download.file() Г§Г ГўГ Г­ГІГ Г¦ГІГҐ Г«ГѕГЎГЁГ© excel ГґГ Г©Г« Г§ ГЇГ®Г°ГІГ Г«Гі http://data.gov.ua ГІГ  Г§Г·ГЁГІГ Г©ГІГҐ Г©Г®ГЈГ® (xls, xlsx вЂ“ ГЎВіГ­Г Г°Г­Ві ГґГ®Г°Г¬Г ГІГЁ, ГІГ®Г¬Гі ГўГ±ГІГ Г­Г®ГўГЁГІГј mode = вЂњwbвЂќ. Г‚ГЁГўГҐГ¤ВіГІГј ГЇГҐГ°ГёВі 6 Г±ГІГ°Г®ГЄ Г®ГІГ°ГЁГ¬Г Г­Г®ГЈГ® ГґГ°ГҐГ©Г¬Гі Г¤Г Г­ГЁГµ.
 
 install.packages("xlsx") 
 library(xlsx) 
@@ -11,6 +11,7 @@ library(readxl)
 install.packages("XML") 
 library(XML)
 
+
 events_web<-"https://data.gov.ua/dataset/c164ab46-25e1-4590-b63d-6e3c0fc6a52c/resource/d09ec7be-ba95-43ca-9c3a-37d0afafa31c/download/events_of_science.xlsx"
 events<-"C:/Users/dumen/Documents/events_of_science.xlsx"
 download.file (events_web, events, mode = "wb")
@@ -18,7 +19,7 @@ download.file (events_web, events, mode = "wb")
 table_events<-read_xlsx(events)
 head(table_events, n=6)
 
-## 2. За допомогою download.file() завантажте файл getdata_data_ss06hid.csv за посиланням https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv та завантажте дані в R. Code book, що пояснює значення змінних знаходиться за посиланням https://www.dropbox.com/s/dijv0rlwo4mryv5/PUMSDataDict06.pdf?dl=0 Необхідно знайти, скільки property мають value $1000000+
+## 2. Г‡Г  Г¤Г®ГЇГ®Г¬Г®ГЈГ®Гѕ download.file() Г§Г ГўГ Г­ГІГ Г¦ГІГҐ ГґГ Г©Г« getdata_data_ss06hid.csv Г§Г  ГЇГ®Г±ГЁГ«Г Г­Г­ГїГ¬ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv ГІГ  Г§Г ГўГ Г­ГІГ Г¦ГІГҐ Г¤Г Г­Ві Гў R. Code book, Г№Г® ГЇГ®ГїГ±Г­ГѕВє Г§Г­Г Г·ГҐГ­Г­Гї Г§Г¬ВіГ­Г­ГЁГµ Г§Г­Г ГµГ®Г¤ГЁГІГјГ±Гї Г§Г  ГЇГ®Г±ГЁГ«Г Г­Г­ГїГ¬ https://www.dropbox.com/s/dijv0rlwo4mryv5/PUMSDataDict06.pdf?dl=0 ГЌГҐГ®ГЎГµВіГ¤Г­Г® Г§Г­Г Г©ГІГЁ, Г±ГЄВіГ«ГјГЄГЁ property Г¬Г ГѕГІГј value $1000000+
 
 housing_web<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
 housing<-"C:/Users/dumen/Documents/housing.csv"
@@ -27,7 +28,7 @@ table_housing<-read.csv(housing)
 
 length(which(table_housing$VAL==24))
 
-## 3.	Зчитайте xml файл за посиланням http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml Скільки ресторанів мають zipcode 21231?
+## 3.	Г‡Г·ГЁГІГ Г©ГІГҐ xml ГґГ Г©Г« Г§Г  ГЇГ®Г±ГЁГ«Г Г­Г­ГїГ¬ http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml Г‘ГЄВіГ«ГјГЄГЁ Г°ГҐГ±ГІГ®Г°Г Г­ВіГў Г¬Г ГѕГІГј zipcode 21231?
 
 rest_web<-"http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
 rest<-xmlTreeParse(rest_web, useInternal = TRUE)
